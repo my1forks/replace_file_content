@@ -1,6 +1,5 @@
-This repo is to replace offical minifiler(windows file system driver) template  
+利用minifilter对记事本做加解密操作。
 
 
 
-主要是vs生成的minifilter的模板都集中在一个cpp文件里，看起来麻烦，维护起来也麻烦,我稍微改了以下。
-
+利用notepad打开是密文,winhex打开是明文
