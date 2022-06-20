@@ -37,6 +37,9 @@ namespace utils {
 		if (!p)
 			return false;
 
+		if (!MmIsAddressValid(p))
+			return false;
+
 		if (p->Type != IO_TYPE_FILE)
 			return false;
 

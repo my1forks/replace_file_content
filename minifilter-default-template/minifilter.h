@@ -17,11 +17,11 @@ namespace dbg {
     }
 
     __inline void dbgbreak() {
-#ifdef DBG
-        DbgBreakPoint();
-#else
-        print("breakpoint trigger\n");
-#endif
+        if(*KdDebuggerNotPresent)
+            print("breakpoint trigger\n");
+        else
+            DbgBreakPoint();
+        
 
     }
 

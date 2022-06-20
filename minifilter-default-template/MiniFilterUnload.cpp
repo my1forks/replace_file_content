@@ -6,6 +6,8 @@ namespace minifilter {
     ) {
         PAGED_CODE();
         FltUnregisterFilter(gFilterHandle);
+
+        dbg::print("replace unloaded\n");
         return STATUS_SUCCESS;
     }
 }

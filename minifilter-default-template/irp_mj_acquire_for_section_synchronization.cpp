@@ -10,6 +10,11 @@ namespace minifilter
             _Flt_CompletionContext_Outptr_ PVOID* CompletionContext
         )
         {
+            PFILE_OBJECT FileObject = Data->Iopb->TargetFileObject;
+            
+
+
+
             return FLT_PREOP_SUCCESS_WITH_CALLBACK;
         }
         FLT_POSTOP_CALLBACK_STATUS

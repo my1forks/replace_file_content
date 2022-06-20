@@ -10,6 +10,20 @@ namespace minifilter
             _Flt_CompletionContext_Outptr_ PVOID* CompletionContext
         )
         { 
+            if (Data->Iopb->IrpFlags & IRP_PAGING_IO)
+                return FLT_PREOP_SUCCESS_NO_CALLBACK;
+
+            //fast io
+
+            if (FLT_IS_FASTIO_OPERATION(Data)) {
+                return FLT_PREOP_SUCCESS_WITH_CALLBACK;
+            }
+
+            //irp io
+
+
+
+
             return FLT_PREOP_SUCCESS_WITH_CALLBACK;
         }
         FLT_POSTOP_CALLBACK_STATUS

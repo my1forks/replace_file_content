@@ -10,6 +10,24 @@ namespace minifilter
             _Flt_CompletionContext_Outptr_ PVOID* CompletionContext
         )
         {
+            PFILE_OBJECT FileObject = Data->Iopb->TargetFileObject;
+            if (!utils::IsValidFileObjectPointer(FileObject))
+                dbg::dbgbreak();
+
+            WCHAR* FileName = utils::GetFileFullPathName(Data, FltObjects);
+            if (FileName) {
+                FileName = _wcslwr(FileName);
+                if (wcsstr(FileName, L"sbb")) {
+
+                }
+            }
+            else
+            {
+
+            }
+
+
+
             return FLT_PREOP_SUCCESS_WITH_CALLBACK;
         }
         FLT_POSTOP_CALLBACK_STATUS

@@ -26,7 +26,7 @@ typedef struct _CTX_INSTANCE_CONTEXT {
 //
 
 typedef struct _CTX_FILE_CONTEXT {
-	
+	bool isNeedEncrypt;
 } CTX_FILE_CONTEXT, * PCTX_FILE_CONTEXT;
 
 #define CTX_FILE_CONTEXT_SIZE         sizeof( CTX_FILE_CONTEXT )

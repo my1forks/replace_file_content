@@ -40,7 +40,7 @@ DriverEntry (
 
 #ifdef DBG
     
-    dbg::print("minifilter loaded (complied at %s)\n", __TIMESTAMP__);
+    dbg::print("replace loaded\n", __TIMESTAMP__);
 #endif // DBG
 
     return status;
